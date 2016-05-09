@@ -1,0 +1,20 @@
+It's a simple script to performe backup of OLTs and ONUs of Fiberhome vendor
+
+-------------------------------------
+by Jorge Luiz Taioque
+jorgeluiztaioque at gmail dot com
+www.networktips.com.br
+-------------------------------------
+backup OLTs and ONUs fiberhome
+Usage 
+./bk-olt-fiberhome.py IP_ADDRESS
+
+Configuration
+Don't forgot to configure all variables in file bk-olt-fiberhome.py
+=======================================================================
+user = 'GEPON'
+password = 'GEPON'
+FTPSERVER = '200.200.200.200'
+ftpuser = 'user'
+ftppassword = '123456'
+=======================================================================
