@@ -29,7 +29,7 @@ child = pexpect.spawn ('telnet '+HOST) #option needs to be a list
 child.timeout = 150
 child.logfile = sys.stdout #display progress on screen
 
-#loging to OLT IP
+#logging in OLT IP
 time.sleep(2)
 child.expect ('Login: ') #waiting for login
 child.sendline (user) #sending login name
