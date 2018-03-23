@@ -54,7 +54,7 @@ mydate = arrow.now().format('YYYY-MM-DD')
 
 
 #sending commando to copy configuration file to remote FTP server
-child.sendline ('upload ftp config '+FTPSERVER+' '+ftpuser+' '+ftppassword+' '+ftpdirectory+'/bk-olt-'+HOST+'-.cfg')
+child.sendline ('upload ftp config '+FTPSERVER+' '+ftpuser+' '+ftppassword+' '+ftpdirectory+'/bk-olt-'+HOST+'-'+mydate+'.cfg')
 time.sleep(10)
 
 #exiting connection
