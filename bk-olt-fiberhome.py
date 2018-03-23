@@ -12,6 +12,7 @@
 import sys,pexpect
 import getpass
 import time
+import arrow
 
 HOST = sys.argv[1]
 
@@ -22,6 +23,7 @@ password = 'GEPON'
 FTPSERVER = '200.200.200.200'
 ftpuser = 'user'
 ftppassword = '123456'
+ftpdirectory = '/backups'
 #=======================================================================
 
 
@@ -46,8 +48,13 @@ child.sendline (password) #sending enable password
 time.sleep(3)
 child.expect('#')
 
+
+#defining the actual date to be add to the filename
+mydate = arrow.now().format('YYYY-MM-DD')
+
+
 #sending commando to copy configuration file to remote FTP server
-child.sendline ('upload ftp config '+FTPSERVER+' '+ftpuser+' '+ftppassword+' bk-olt-'+HOST+'-.cfg')
+child.sendline ('upload ftp config '+FTPSERVER+' '+ftpuser+' '+ftppassword+' '+ftpdirectory+'/bk-olt-'+HOST+'-.cfg')
 time.sleep(10)
 
 #exiting connection

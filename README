@@ -17,4 +17,5 @@ password = 'GEPON'
 FTPSERVER = '200.200.200.200'
 ftpuser = 'user'
 ftppassword = '123456'
+ftpdirectory = ''
 =======================================================================
